@@ -17,21 +17,6 @@ const Mini_calc = () => {
     }
 
     setResult(result + btnValue);
-    // if (
-    //   ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."].includes(btnValue)
-    // ) {
-    //   setResult(result + btnValue);
-    // } else if (btnValue === "C" && result !== "") {
-    //   let tempResults = result.toString().slice(0, -1);
-    //   setResult(tempResults);
-    // } else if (btnValue === "AC" && result !== "") {
-    //   setResult("");
-    // } else if (
-    //   ["/", "*", "+", "-", "%", "**"].includes(btnValue) &&
-    //   result !== ""
-    // ) {
-    //   setResult(result + btnValue);
-    // }
   };
   const calculate = () => {
     setResult(eval(result).toString());
