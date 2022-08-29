@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import style from "./style.css";
 const Mini_calc = () => {
+  // state to hold results
   const [result, setResult] = useState("");
   const operators = ["/", "*", "+", "-", "%", "**"];
   const handleChange = (e) => {
     let btnValue = e.target.innerText;
-    console.log(btnValue);
+
     if (
+      // logical (&&) true if and only if all the operands are true. Otherwise it will be false.
+      // when btnvalue is set to one of th operator and result has nothing
+      // when btnvalue is set to one of the operator and last value is also an operator
+      // then return nothing
       (operators.includes(btnValue) && result === "") ||
       (operators.includes(btnValue) && operators.includes(result.slice(-1)))
     ) {
